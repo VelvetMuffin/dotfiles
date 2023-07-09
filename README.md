@@ -113,8 +113,8 @@ sudo cp -r corners/ /usr/share/sddm/themes/
 sudo cp sddm.conf /etc/sddm.conf.d
 ```
 
-[Cursor-theme](https://www.pling.com/p/1393084/)
-[Icon-theme](https://gitlab.com/garuda-linux/themes-and-settings/artwork/beautyline)
+- [Cursor-theme](https://www.pling.com/p/1393084/)
+- [Icon-theme](https://gitlab.com/garuda-linux/themes-and-settings/artwork/beautyline)
 
 ### Firefox css and fonts are present in Fonts and firefox css folder
 
