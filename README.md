@@ -8,13 +8,13 @@
 System
 <img allign="center" src="/images/system.png">
 
-Firfeox
+Firefox
 <img allign="center" src="/images/firefox.png">
 
 Code Editors
 <img allign="center" src="/images/code_editors.png">
 
-# install
+# Install
 
 Get a Everything iso of Fedora and do a minimal install
 

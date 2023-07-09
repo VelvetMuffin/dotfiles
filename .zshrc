@@ -7,7 +7,7 @@
 
 while read file
 do 
-  source "/home/fedora/.config/zsh/$file.zsh"
+  source "~/.config/zsh/$file.zsh"
 done <<-EOF
 theme
 env
