@@ -88,8 +88,8 @@ sudo cp Hyprshot/hyprshot /usr/bin
 
 [Nix-env setup](https://github.com/dnkmmr69420/nix-installer-scripts)
 
+- Nixpks have over 80,000 pkgs to install from and are more up to date than fedora's. You can use nix-env --install to install packages 
 ```sh
-# Nixpks have over 80,000 pkgs to install from and are more up to date than fedora's. You can use nix-env --install to install packages 
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/regular-installer.sh | bash
 nix-env --install swww
 ```
