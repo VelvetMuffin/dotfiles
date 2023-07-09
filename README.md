@@ -111,3 +111,4 @@ cp .config ~/
 - andreasgrafen https://github.com/andreasgrafen (Cascade One-Line Firefox css)
 - black7375 https://github.com/black7375 (FirefoxUI-fix)
 - miguervila https://github.com/migueravila (The startpage)
+- prasanthrangan https://github.com/prasanthrangan (the rofi and swww configs are borrowed from his)
