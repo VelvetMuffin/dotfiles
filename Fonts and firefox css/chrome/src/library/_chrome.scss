@@ -1,0 +1,7 @@
+@import "folder_icons";
+
+@include moz-document(url "chrome://browser/content/places/places.xhtml") {
+  @include OS($linux) {
+    @import "menubar";
+  }
+}

@@ -1,0 +1,93 @@
+@include Option(
+  "userChrome.sidebar.overlap",
+  "userChrome.autohide.sidebar",
+  "userChrome.navbar.as_sidebar"
+) {
+  :root {
+    /* Original
+    min-width: 14em;
+    width: 18em;
+    max-width: 36em;
+   */
+    --uc-sidebar-width: 40px;
+    --uc-sidebar-activate-width: 18rem;
+    --uc-sidebar-activate-width-reverse: calc(-1 * var(--uc-sidebar-activate-width));
+    --uc-sidebar-fullscreen-width: 4px;
+    --uc-sidebar-shadow-size: 1px;
+    --uc-sidebar-shadow-width: 0px;
+    --uc-sidebar-shadow-position: var(--uc-sidebar-shadow-position-default);
+    --uc-sidebar-shadow-position-default: calc(var(--uc-sidebar-shadow-size) + var(--uc-sidebar-shadow-width));
+    --uc-sidebar-shadow-color: #28282F;
+
+    --uc-autohide-sidebar-speed: 750ms;
+    --uc-autohide-fullscreen-sidebar-speed: 1s;
+    --uc-autohide-sidebar-delay: 600ms; /* Wait 0.6s before hiding sidebar */
+  }
+
+  #sidebar-splitter {
+    display: none !important;
+  }
+}
+
+@include Option("userChrome.sidebar.overlap", "userChrome.autohide.sidebar") {
+  #sidebar-box {
+    --uc-sidebar-shadow-color: #28282F;
+
+    z-index: 1 !important;
+    position: relative !important;
+
+    box-shadow: var(--uc-sidebar-shadow-position) 0px 15px -10px var(--uc-sidebar-shadow-color);
+    &[positionend="true"] {
+      --uc-sidebar-shadow-position: calc(-1 * var(--uc-sidebar-shadow-position-default));
+    }
+  }
+
+  #sidebar {
+    display: block;
+  }
+}
+
+@include Option("userChrome.sidebar.overlap") {
+  #sidebar-box[positionend="true"] {
+    direction: rtl;
+  }
+
+  #sidebar-header,
+  #sidebar {
+    background-color: var(--sidebar-background-color) !important;
+    color: var(--sidebar-text-color) !important;
+    overflow: hidden;
+  }
+
+  #sidebar-header {
+    font-size: unset !important;
+
+    > #sidebar-switcher-target {
+      font-size: 1.333em;
+    }
+  }
+
+  @include NotOption("userChrome.autohide.sidebar") {
+    #sidebar-box,
+    #sidebar-header,
+    #sidebar {
+      min-width: var(--uc-sidebar-activate-width) !important;
+      max-width: var(--uc-sidebar-activate-width) !important;
+    }
+
+    #sidebar-box {
+      margin-inline-start: var(--uc-sidebar-activate-width-reverse) !important;
+      will-change: padding-inline;
+
+      --uc-sidebar-shadow-width: var(--uc-sidebar-activate-width);
+      &:not([hidden="true"]) {
+        padding-inline-start: var(--uc-sidebar-activate-width) !important;
+      }
+
+      @include Animate {
+        transition: padding-inline-start 0.25s var(--animation-easing-function), opacity 0.25s ease-in-out,
+                    box-shadow 0s linear, visibility 0s linear !important;
+      }
+    }
+  }
+}

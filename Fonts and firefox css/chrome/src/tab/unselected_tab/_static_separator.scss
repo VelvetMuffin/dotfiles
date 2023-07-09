@@ -1,0 +1,49 @@
+#TabsToolbar {
+  --toolbarseparator-color: color-mix(in srgb, currentColor 30%, transparent);
+}
+
+.tab-stack::before,
+.tabbrowser-tab:last-of-type .tab-stack::after {
+  content: "";
+}
+
+.tab-stack::before,
+.tab-stack::after {
+  /* Box Model */
+  display: block;
+  position: absolute;
+
+  /* Position */
+  top: 50%;
+  transform:  translateY(-50%);
+  z-index: 1;
+
+  /* Bar shape */
+  width: 0px;
+  height: 100%;
+
+  /* Bar Color */
+  border-right: 1px solid var(--toolbarseparator-color);
+}
+.tab-stack::after {
+  right: 0;
+}
+
+.tabbrowser-tab[visuallyselected] .tab-stack::before,
+.tabbrowser-tab[visuallyselected] + .tabbrowser-tab .tab-stack::before,
+.tabbrowser-tab[visuallyselected] .tab-stack::after {
+  @include Option("userChrome.tab.static_separator.selected_accent") {
+    --toolbarseparator-color: var(--tab-line-color, var(--lwt-tab-line-color, rgb(10, 132, 255)));
+  }
+  @include NotOption("userChrome.tab.static_separator.selected_accent") {
+    opacity: 0;
+  }
+}
+
+/* Animate */
+@include Animate {
+  .tab-stack::before,
+  .tab-stack::after {
+    transition: opacity 0.2s var(--animation-easing-function); /* cubic-bezier(.07, .95, 0, 1) */
+  }
+}

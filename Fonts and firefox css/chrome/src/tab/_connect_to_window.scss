@@ -1,0 +1,36 @@
+#tabbrowser-tabs[orient="vertical"] {
+  --uc-tab-border-bottom-radius: var(--tab-border-radius);
+}
+.tab-background {
+  border-radius: var(--tab-border-radius) var(--tab-border-radius) var(--uc-tab-border-bottom-radius, 0px) var(--uc-tab-border-bottom-radius, 0px) !important;
+  margin-bottom: 0px !important;
+}
+
+.tab-content {
+  margin-top: var(--tab-block-margin);
+}
+
+.tab-stack {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Remove line at Toolbar's top */
+#tabbrowser-tabs {
+  z-index: 1 !important;
+}
+@include NotOption("userChrome.tabbar.multi_row") {
+  #TabsToolbar:not([multibar]) {
+    overflow: clip; /* Prevent toolbar area over */
+  }
+}
+
+/* Pinned Tab - tabbrowser-arrowscrollbox overflowing */
+#tabbrowser-tabs[positionpinnedtabs] > #tabbrowser-arrowscrollbox > .tabbrowser-tab[pinned] {
+  z-index: 0 !important;
+
+  .tab-stack {
+    /* Temporary solution for compatibility #513 */
+    overflow-y: clip;
+  }
+}

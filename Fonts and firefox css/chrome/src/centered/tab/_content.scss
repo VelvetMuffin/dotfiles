@@ -1,0 +1,4 @@
+.tab-icon-stack {
+  @include BoxFlex(1);
+  justify-content: end;
+}

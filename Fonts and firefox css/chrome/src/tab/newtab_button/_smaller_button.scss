@@ -1,0 +1,8 @@
+#tabs-newtab-button > .toolbarbutton-icon {
+  // Not like tab, as button
+  --tab-border-radius: var(--toolbarbutton-border-radius);
+  margin-left: 1px;
+
+  /* Original: calc((var(--tab-min-height) - 16px) / 2) = 10px */
+  --toolbarbutton-inner-padding: var(--uc-small-toolbarbutton-inner-padding);
+}

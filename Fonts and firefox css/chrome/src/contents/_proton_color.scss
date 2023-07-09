@@ -1,0 +1,33 @@
+@include moz-document(
+  url-prefix "about:",
+  url-prefix "chrome://",
+  url-prefix "https://addons.mozilla.org",
+  url-prefix "https://support.mozilla.org",
+  url-prefix "https://accounts.firefox.com",
+  url-prefix "view-source",
+  regexp "^((jar:)?file:\/\/\/).*\/$"
+) {
+  @import "../theme/proton_color";
+
+  @include Option("userContent.page.proton_color.dark_blue_accent") {
+    @include Dark {
+      @import "../theme/dark_blue_color";
+
+      :host, :root {
+        @include DarkBlueContent;
+      }
+    }
+  }
+
+  @include Option("userContent.page.proton_color.system_accent") {
+    :host, :root {
+      @include AccentColor("Highlight") {
+        --in-content-primary-button-text-color: #{$accentTextColor} !important;
+
+        --in-content-primary-button-background: #{$accentColor} !important;
+        --in-content-primary-button-background-hover: color-mix(in srgb, black 10%, #{$accentColor}) !important;
+        --in-content-primary-button-background-active: color-mix(in srgb, black 20%, #{$accentColor}) !important;
+      }
+    }
+  }
+}

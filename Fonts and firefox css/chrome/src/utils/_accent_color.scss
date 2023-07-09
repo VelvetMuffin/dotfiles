@@ -1,0 +1,27 @@
+@use "option" as *;
+
+// Compatibility for accent color
+// https://github.com/mozilla/gecko-dev/commit/4c5f20179e8d3b963dc588efb9dc2c7b49e7bb31
+//
+// Need to hard coded #437
+$accentColor: AccentColor;
+$accentTextColor: AccentColorText;
+
+@mixin AccentColor($mode: "-moz-accent-color") {
+  @content;
+
+  @include Option("userChrome.compatibility.accent_color") {
+    @if $mode == "Highlight" {
+      $accentColor: Highlight !global;
+      $accentTextColor: HighlightText !global;
+    }
+    @else {
+      $accentColor: -moz-accent-color !global;
+      $accentTextColor: -moz-accent-color-foreground !global;
+    }
+
+    @content;
+  }
+  $accentColor: AccentColor !global;
+  $accentTextColor: AccentColorText !global;
+}
