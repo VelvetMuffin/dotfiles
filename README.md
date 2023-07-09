@@ -29,9 +29,9 @@ sudo dnf swap ffmpeg-free ffmpeg --allowerasing
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 sudo dnf groupupdate sound-and-video
 ## Hardware Accelerated Codec
-# intel (recent)
+# Intel (recent)
 sudo dnf install intel-media-driver
-# intel (Old)
+# Intel (Old)
 sudo dnf install libva-intel-driver
 # Hardware codecs with AMD (mesa)
 sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
@@ -86,9 +86,17 @@ chmod +x Hyprshot/hyprshot
 sudo cp Hyprshot/hyprshot /usr/bin
 ```
 
+[NvChad](https://github.com/NvChad/NvChad)
+
+```sh
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
+
 [Nix-env setup](https://github.com/dnkmmr69420/nix-installer-scripts)
 
-- Nixpks have over 80,000 pkgs to install from and are more up to date than fedora's. You can use nix-env --install to install packages 
+- Nixpkgs have over 80,000 pkgs to install from and are more up to date than fedora's. You can use nix-env --install to install packages 
 ```sh
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/regular-installer.sh | bash
 nix-env --install swww
@@ -100,7 +108,14 @@ nix-env --install swww
 git clone https://github.com/VelvetMuffin/dotfiles.git Dotfiles
 cd Dotfiles
 cp .config ~/
+git clone https://github.com/aczw/sddm-theme-corners.git
+cd sddm-theme-corners
+sudo cp -r corners/ /usr/share/sddm/themes/
+sudo cp sddm.conf /etc/sddm.conf.d
 ```
+
+[Cursor-theme](https://www.pling.com/p/1393084/)
+[Icon-theme](https://gitlab.com/garuda-linux/themes-and-settings/artwork/beautyline)
 
 ### Firefox css and fonts are present in Fonts and firefox css folder
 
@@ -111,3 +126,7 @@ cp .config ~/
 - andreasgrafen https://github.com/andreasgrafen (Cascade One-Line Firefox css)
 - black7375 https://github.com/black7375 (FirefoxUI-fix)
 - miguervila https://github.com/migueravila (The startpage)
+- prasanthrangan https://github.com/prasanthrangan (The rofi and swww configs are borrowed from his)
+- dnkmmr69429 https://github.com/dnkmmr69420 (The nixpkg install script)
+- NvChad https://github.com/NvChad/NvChad (It basically turns neovim into a IDE)
+- aczw https://github.com/aczw (sddm theme)
