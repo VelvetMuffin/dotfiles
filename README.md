@@ -101,8 +101,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/installer-scripts/regular-installer.sh | bash
 nix-env --install swww
 ```
-
-# Copy the files from .config to your .config folder or copy the entire thing to ~/
+Copying the setup
 
 ```sh
 git clone https://github.com/VelvetMuffin/dotfiles.git Dotfiles
