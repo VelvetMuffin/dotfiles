@@ -102,7 +102,7 @@ cd Dotfiles
 cp .config ~/
 ```
 
-# Firefox css and fonts are present in Fonts and firefox css folder
+### Firefox css and fonts are present in Fonts and firefox css folder
 
 # Credits
 - linuxmobile https://github.com/linuxmobile (Almost all of this setup was based on one of his older setup)
