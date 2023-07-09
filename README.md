@@ -126,7 +126,3 @@ sudo cp sddm.conf /etc/sddm.conf.d
 - andreasgrafen https://github.com/andreasgrafen (Cascade One-Line Firefox css)
 - black7375 https://github.com/black7375 (FirefoxUI-fix)
 - miguervila https://github.com/migueravila (The startpage)
-- prasanthrangan https://github.com/prasanthrangan (The rofi and swww configs are borrowed from his)
-- dnkmmr69429 https://github.com/dnkmmr69420 (The nixpkg install script)
-- NvChad https://github.com/NvChad/NvChad (It basically turns neovim into a IDE)
-- aczw https://github.com/aczw (sddm theme)
