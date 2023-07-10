@@ -16,6 +16,9 @@ Firefox
 Code Editors
 <img allign="center" src="/images/code_editors.png">
 
+Sddm
+<img allign="center" src="/images/sddm.png>
+
 # Install
 
 Get a Everything iso of Fedora and do a minimal install
@@ -109,10 +112,12 @@ Copying the setup
 git clone https://github.com/VelvetMuffin/dotfiles.git Dotfiles
 cd Dotfiles
 cp .config ~/
+# Sddm theme
 git clone https://github.com/aczw/sddm-theme-corners.git
 cd sddm-theme-corners
 sudo cp -r corners/ /usr/share/sddm/themes/
 sudo cp sddm.conf /etc/sddm.conf.d
+# Gtklock
 git clone https://github.com/jovanlanik/gtklock.git
 cd gtklock
 make
@@ -134,5 +139,5 @@ Put the cursor theme and icon theme in .icons folder and put the gtk theme in .t
 - andreasgrafen https://github.com/andreasgrafen (Cascade One-Line Firefox css)
 - black7375 https://github.com/black7375 (FirefoxUI-fix)
 - miguervila https://github.com/migueravila (The startpage)
-- prasnathranagn https://github.com/prasanthrangan (The sww and rofi configs were borrowed from him)
+- prasnathranagn https://github.com/prasanthrangan (The swww and rofi configs were borrowed from him)
 - jovanlanik https://github.com/jovanlanik (Gtklock)
