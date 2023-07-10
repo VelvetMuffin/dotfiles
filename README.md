@@ -15,7 +15,7 @@ Code Editors
 <img allign="center" src="/images/code_editors.png">
 
 Video Showcase
-<img allign="center" src="/imgaes/Video.mp4>
+<img allign="center" src="/images/Video.gif>
 
 # Install
 
@@ -49,7 +49,7 @@ sudo dnf install nvidia-vaapi-driver
 Dependecies
 
 ```sh
-sudo dnf install ninja-build cmake meson gcc-c++ libxcb-devel libX11-devel pixman-devel wayland-protocols-devel cairo-devel pango-devel wayland-devel libdrm-devel libxkbcommon-devel mesa-libEGL-devel mesa-libgbm-devel vulkan-loader-devel glslang systemd-devel libseat-devel hwdata-devel libdisplay-info-devel libinput-devel xorg-x11-server-Xwayland-devel xcb-util-renderutil-devel xcb-util-wm-devel imagmagick wl-clipboard nvim thunar ristretto rofi lutris steam wine android-tools waybar wlogout dunst sddm grim slurp jq zsh neofetch btop cava kitty
+sudo dnf install ninja-build cmake meson gcc-c++ libxcb-devel libX11-devel pixman-devel wayland-protocols-devel cairo-devel pango-devel wayland-devel libdrm-devel libxkbcommon-devel mesa-libEGL-devel mesa-libgbm-devel vulkan-loader-devel glslang systemd-devel libseat-devel hwdata-devel libdisplay-info-devel libinput-devel xorg-x11-server-Xwayland-devel xcb-util-renderutil-devel xcb-util-wm-devel imagmagick wl-clipboard nvim thunar ristretto rofi lutris steam wine android-tools waybar wlogout dunst sddm grim slurp jq zsh neofetch btop cava kitty gnome-font-viewer udiskie gcc make pkgconf scdoc pam-devel gtk3-devel gtk-layer-shell-devel
 ```
 
 Hyprland
@@ -114,10 +114,17 @@ git clone https://github.com/aczw/sddm-theme-corners.git
 cd sddm-theme-corners
 sudo cp -r corners/ /usr/share/sddm/themes/
 sudo cp sddm.conf /etc/sddm.conf.d
+git clone https://github.com/jovanlanik/gtklock.git
+cd gtklock
+make
+sudo make install
 ```
+
+Put the cursor theme and icon theme in .icons folder and put the gtk theme in .themes folder in your home directory
 
 - [Cursor-theme](https://www.pling.com/p/1393084/)
 - [Icon-theme](https://gitlab.com/garuda-linux/themes-and-settings/artwork/beautyline)
+- [GTK-theme](https://github.com/catppuccin/gtk)
 
 ### Firefox css and fonts are present in Fonts and firefox css folder
 
@@ -129,3 +136,4 @@ sudo cp sddm.conf /etc/sddm.conf.d
 - black7375 https://github.com/black7375 (FirefoxUI-fix)
 - miguervila https://github.com/migueravila (The startpage)
 - prasnathranagn https://github.com/prasanthrangan (The sww and rofi configs were borrowed from him)
+- jovanlanik https://github.com/jovanlanik (Gtklock)
