@@ -14,9 +14,6 @@ Firefox
 Code Editors
 <img allign="center" src="/images/code_editors.png">
 
-Video Showcase
-<img allign="center" src="/images/Video.gif>
-
 # Install
 
 Get a Everything iso of Fedora and do a minimal install
