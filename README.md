@@ -3,6 +3,8 @@
 - [Fedora](https://fedoraproject.org/)
 - [Hyprland](https://github.com/hyprwm/Hyprland)
 
+https://github.com/VelvetMuffin/dotfiles/assets/132045876/622f9bb0-daeb-4fee-a648-ca9cc0c29227
+
 # Screenshots
 
 System
