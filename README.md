@@ -14,6 +14,9 @@ Firefox
 Code Editors
 <img allign="center" src="/images/code_editors.png">
 
+Video Showcase
+<img allign="center" src="/imgaes/Video.mp4>
+
 # Install
 
 Get a Everything iso of Fedora and do a minimal install
@@ -125,3 +128,4 @@ sudo cp sddm.conf /etc/sddm.conf.d
 - andreasgrafen https://github.com/andreasgrafen (Cascade One-Line Firefox css)
 - black7375 https://github.com/black7375 (FirefoxUI-fix)
 - miguervila https://github.com/migueravila (The startpage)
+- prasnathranagn https://github.com/prasanthrangan (The sww and rofi configs were borrowed from him)
