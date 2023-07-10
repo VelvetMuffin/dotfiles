@@ -17,7 +17,7 @@ Code Editors
 <img allign="center" src="/images/code_editors.png">
 
 Sddm
-<img allign="center" src="/images/sddm.png>
+<img allign="center" src="/images/sddm.png">
 
 # Install
 
