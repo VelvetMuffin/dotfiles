@@ -54,6 +54,13 @@ Dependecies
 sudo dnf install ninja-build cmake meson gcc-c++ libxcb-devel libX11-devel pixman-devel wayland-protocols-devel cairo-devel pango-devel wayland-devel libdrm-devel libxkbcommon-devel mesa-libEGL-devel mesa-libgbm-devel vulkan-loader-devel glslang systemd-devel libseat-devel hwdata-devel libdisplay-info-devel libinput-devel xorg-x11-server-Xwayland-devel xcb-util-renderutil-devel xcb-util-wm-devel imagmagick wl-clipboard nvim thunar ristretto rofi lutris steam wine android-tools waybar wlogout dunst sddm grim slurp jq zsh neofetch btop cava kitty gnome-font-viewer udiskie gcc make pkgconf scdoc pam-devel gtk3-devel gtk-layer-shell-devel
 ```
 
+Enable sddm service
+
+```sh
+sudo systemctl enable sddm
+sudo systemctl set-default graphical.target
+```
+
 Hyprland
 
 ```sh
