@@ -71,9 +71,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:  %I:%M:%S %p    %d/%m/%y}",
-        "interval": 1,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "format": "  {:%I:%M:%S %p   %a, %b %d, %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
